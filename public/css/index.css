@@ -1,7 +1,83 @@
 html {
-  max-width: 720px;
+  width: 1920px;
+  height: 1020px;
 }
 
 body {
+  width: 960px;
   background: #fff;
+  margin: 0px auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  font-size: 16px;
+}
+.header-nav {
+  display: flex;
+  justify-content: right;
+  margin-right: -12px;
+}
+.link{
+  padding: 0 12px;
+}
+
+main {
+
+}
+
+.title {
+  font-size: 56px;
+  text-align: center;
+}
+.infotext {
+  width: 584px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.row {
+  gap: auto;
+}
+
+.name {
+  text-align: center;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.taxis-info {
+  color: #212529 ;
+  font-size: 40px;
+  text-align: center;
+}
+
+.taxis-info span {
+  color: #6C757D;
+  font-size: 29px;
+}
+
+.card-body {
+  text-align: center;
+}
+.features {
+  font-size: 16px;
+  line-height: auto;
+  padding-bottom: 12px 0;
+}
+
+
+footer {
+  
+}
+.footer-link-title{
+  color: #212529;
+  font-size: 20px;
+}
+
+.footer-link a {
+  text-decoration: none;
+  color: #6C757D;
 }

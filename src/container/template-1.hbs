@@ -1,0 +1,71 @@
+<header class="header mb-5">
+    <div class="bs-icon">
+        <img src="../images/icons/bootstrap.svg" alt="bootstrap icon" class="">
+    </div>
+    <div class="header-nav">
+        <nav class="header-nav">
+            {{#each header}}
+            <div class="link">
+                <a href="{{url}}" class="nav-link"> {{text}} </a>
+            </div>
+            {{/each}}
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="price-info my-5">
+        {{#with hero}}
+            <p class="title">{{title}}</h1>
+            <p class="infotext"> {{text}} </p>
+        {{/with}}
+    </section>
+
+    <section class="plans my-5">
+        <div class="row gx-2">
+            {{#each plans}}
+            <div class="card col mx-2">
+                <p class="card-header name"> {{this.name}} </p>
+                <div class="card-body">
+                    <p class="taxis-info"> ${{this.price}} <span>/ mo</span></p>                    
+                        {{#each features}}
+                        <p class="features"> {{this}} </p>
+                        {{/each}}
+                    {{#if @first}}
+                    <button class="btn btn-outline-primary">
+                        {{this.button}}
+                    </button>
+                    {{else}}
+                    <button class="btn btn-primary">
+                        {{this.button}}
+                    </button>
+                    {{/if}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+</main>
+
+<footer class="mt-5">
+   <div class="row">
+      <div class="col-4">
+         <img src="../images/icons/bootstrap.svg" alt="bootstrap icon">
+         <p>Copyright 2023</p>
+      </div>
+      <div class="col-8">
+         <div class="row">
+            {{#each footer}}
+            <div class="col-4">
+               <p class="footer-link-title"> {{title}} </p>
+               {{#each links}}
+               <div class="footer-link">
+                  <a href="{{url}}" class=""> {{text}} </a>
+               </div>   
+               {{/each}}
+            </div>
+            {{/each}}
+         </div>
+      </div>   
+   </div>
+</footer>

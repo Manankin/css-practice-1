@@ -1,0 +1,67 @@
+<main class='template-2'>
+  <section class='hero'>
+    {{#with hero}}
+      <h1 class='hero-title'> {{title}} </h1>
+      <p class='hero-text'> {{text}} </p>
+      <button class='hero-button'>
+        {{#with button}}
+          <a href='{{url}}'> {{text}} </a>
+        {{/with}}
+      </button>
+    {{/with}}
+  </section>
+
+   <section class='preview-block'>
+      <div class='row g-4'>
+         {{#each preview}}
+         <div class='col-6'>
+            {{> cardPreview data=this}}
+         </div>
+         {{/each}}
+
+      </div>
+   </section>
+
+   <section class="main">
+      <div class="categories-list">
+         <div class="list-title">
+            <h3>List of posts</h3>
+         </div>
+         <div class="items-list">
+            {{#each categories}}
+            <button type="button" class="list-item"> {{text}} </button>
+            {{/each}}         
+         </div>
+      </div>
+      <div class="news-and-achieve">
+         <div class="news">
+            {{#each news}}
+            <div class="news-item">
+               <h3 class="news-title"> {{title}} </h3>
+               <p class="news-info"> {{date}} by <span>{{author}}</span></p>
+               <p class="description"> {{description}} </p>
+               <a href='#'>continie reading</a>
+            </div>
+            {{/each}}
+         </div>
+         <aside class="achieve">
+            <div class="about">
+               <h3>About</h3>
+               <p class="about-team"> {{about}} </p>
+            </div>
+            <div class="achieves">
+               <h3>Archives</h3>
+               {{#each archive}}
+                  <a href="{{url}}"> {{text}} </a>
+               {{/each}}
+            </div>
+            <div class="social">
+               <h3>Social</h3>
+               {{#each social}}
+                  <a href="{{url}}"> {{text}} </a>
+               {{/each}}
+            </div>            
+         </aside>
+      </div>
+   </section>
+</main>

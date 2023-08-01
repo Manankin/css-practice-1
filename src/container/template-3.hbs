@@ -1,0 +1,44 @@
+<main class='template-3'>
+  <section class='hero-block'>
+    {{#with hero}}
+      <div class='hero-info'>
+        <h1 class='hero-title'> {{title}} </h1>
+        <p class='hero-text'> {{text}} </p>
+      </div>
+      <div>
+        <img
+          src='{{photo}}'
+          alt='photo'
+          class='hero-image'
+        />
+      </div>
+    {{/with}}
+  </section>
+
+  <section class='blog'>
+    {{#each blog}}
+      <div class='blog-item'>
+        <img src='{{img}}' alt='image' class='blog-image' />
+        <h2 class='blog-title'> {{title}} </h2>
+        <p class='blog-text'> {{text}} </p>
+        <a href='{{href}}' class='blog-item-button'>
+          {{button}}
+        </a>
+      </div>
+    {{/each}}
+  </section>
+
+  <section class='form'>
+    {{#with form}}
+      <div class='form-info'>
+        <h3 class='form-title'> {{title}} </h3>
+        <p class='form-text'> {{info}} </p>
+      </div>
+      <div class='button'>
+        <a href='{{href}}' class='form-button'>
+          {{button}}
+        </a>
+      </div>
+    {{/with}}
+  </section>
+</main>

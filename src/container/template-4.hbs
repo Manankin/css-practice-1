@@ -1,0 +1,59 @@
+<main class='template-4 flex-col'>
+  <section class='main-block flex-r'>
+    {{#with main}}
+      <div class='main-image-block'>
+        <img
+          src='{{image}}'
+          alt='picture'
+          class='main-image'
+        />
+      </div>
+      <div class='main-description'>
+        <h1 class='main-description-title'>
+          {{heading}}
+        </h1>
+        <p class='main-description-text'>
+          {{descriotion}}
+        </p>
+        <div>
+          <a href='{{href}}' class='main-button'>
+            {{button}}
+          </a>
+        </div>
+
+      </div>
+    {{/with}}
+  </section>
+
+  <section class='featured-block flex-r'>
+    {{#each featured}}
+      <div class='featured-card'>
+        <div class='image-div'>
+          <img
+            src='{{photo}}'
+            alt='photo'
+            class='featured-image'
+          />
+        </div>
+        <h2 class='featured-title'> {{heading}} </h2>
+        <p class='featured-text'> {{info}} </p>
+        <a href='linkUrl' class='featured-link'>
+          {{linkText}}
+        </a>
+      </div>
+    {{/each}}
+  </section>
+
+  <section class='action-block flex-r'>
+    {{#each actions}}
+      <div class='action-card'>
+        <h3 class='action-title'> {{heading}}</h3>
+        <div class='action-button'>
+          <a href='{{url}}' class='action-button-link'>
+            {{text}}
+          </a>
+        </div>
+      </div>
+    {{/each}}
+  </section>
+</main>

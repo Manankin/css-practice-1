@@ -1,0 +1,63 @@
+<main class='template-5'>
+  <section class='message-form flex'>
+    <div class='form'>
+      {{#with form}}
+        <h2 class='form-title'> {{title}} </h2>
+        <form action='' class='form-input-block'>
+          {{#each inputs}}
+            <input
+              type='{{type}}'
+              placeholder='{{placeholder}}'
+              class=''
+              name='{{name}}'
+              id='{{id}}'
+            />
+          {{/each}}
+        </form>
+        <form action='' class='form-checkbox-block'>
+          <input
+            type='checkbox'
+            name='{{checkbox.name}}'
+            id='{{checkbox.name}}'
+          />
+          <div class='checkbox-icon'></div>
+          <label for='{{checkbox.name}}'>
+            {{checkbox.label}}
+          </label>
+        </form>
+
+        <button type='submit' class='form-button'>
+          {{button}}
+        </button>
+        <p class='form-info'> {{info}} </p>
+      {{/with}}
+    </div>
+
+    <div class='messages'>
+      {{#with messages}}
+        <h2 class='msg-title'> {{title}} </h2>
+        {{#each list}}
+          <div class='msg-card'>
+            <div class='msg-info'>
+              <span class='msg-author'> {{name}} </span>
+              <span class='msg-day'> {{day}} </span>
+            </div>
+            <p class='message'> {{message}} </p>
+          </div>
+        {{/each}}
+
+      {{/with}}
+      <a href='#' class='msg-link'>All messages</a>
+    </div>
+  </section>
+
+  <section class='advantages'>
+    {{#each advantages}}
+      <div class='adv-card'>
+        <h2 class='advantages-title'> {{title}} </h2>
+        <p class='advantages-text'> {{text}} </p>
+      </div>
+    {{/each}}
+  </section>
+
+</main>

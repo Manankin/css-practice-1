@@ -1,0 +1,236 @@
+/* var creating */
+:root {
+  --space-s: 12px;
+  --space-m: 24px;
+  --space-l: 36px;
+  --lgcolor-: #5a5a5a;
+  --blcolor-: #212529;
+  --vtcolor-: #563d7c;
+}
+
+/* =============== */
+.html {
+  width: 1920px;
+  height: 1020px;
+}
+
+.page {
+  width: 100%;
+  padding: 0px 12px;
+  display: flex;
+  flex-direction: column;
+}
+.page-content {
+  margin: 0px auto;
+  max-width: 1000px;
+  background: #fff;
+}
+/* =============== */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  font-size: 16px;
+  margin-bottom: 80px;
+  border-bottom: 1px solid #dee2e6;
+}
+.header-nav {
+  display: flex;
+  justify-content: right;
+  margin-right: -12px;
+}
+.link {
+  padding: 0 12px;
+}
+
+footer {
+  margin-top: 80px;
+}
+
+.footer-link-title {
+  color: #212529;
+  font-size: 20px;
+}
+
+.footer-link a {
+  text-decoration: none;
+  color: #6c757d;
+}
+.template-5 {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.advantages {
+  display: flex;
+  gap: var(--space-m);
+  justify-content: space-between;
+}
+.adv-card {
+  padding: var(--space-m);
+  max-width: 33%;
+  width: 100%;
+  border: 1px solid #e4eaf2;
+  border-radius: var(--space-s);
+}
+.advantages-title {
+  color: var(--blcolor-);
+  font-size: 18px;
+  font-weight: 900;
+  padding-bottom: var(--space-s);
+}
+.advantages-text {
+  color: var(--lgcolor-);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.message-form {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: var(--space-l);
+  padding: var(--space-m);
+}
+.messages {
+  max-width: 620px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  padding: var(--space-m);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.1);
+}
+.msg-title {
+  padding-bottom: var(--space-s);
+  color: var(--blcolor-);
+  font-size: 24px;
+  line-height: 20px;
+}
+.msg-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  padding-bottom: var(--space-s);
+  border-bottom: 1px solid #d3dee9;
+}
+.msg-info {
+  display: flex;
+  justify-content: space-between;
+}
+.msg-author {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  color: var(--blcolor-);
+}
+.msg-day {
+  font-size: 16px;
+  color: #6c757d;
+  line-height: 20px;
+}
+.message {
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--blcolor-);
+}
+.msg-link {
+  color: #007bff;
+  font-size: 14px;
+  text-decoration: none;
+  align-self: flex-end;
+  border-bottom: 1px solid transparent;
+  transition-duration: 0.7s;
+  transition-property: opacity, border-color;
+}
+.msg-link:hover {
+  opacity: 0.7;
+  border-color: #007bff;
+}
+
+.form {
+  max-width: 340px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: var(--space-m);
+  padding: var(--space-m);
+  border-radius: var(--space-s);
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.form-title {
+  color: var(--blcolor-);
+  align-self: center;
+  text-align: center;
+  font-size: 24px;
+}
+.form-checkbox-block {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  gap: 8px;
+}
+.form-checkbox-block > input {
+  display: none;
+}
+.form-checkbox-block > label {
+  color: var(--blcolor-);
+  font-size: 16px;
+  line-height: 100%;
+}
+.checkbox-icon {
+  height: 16px;
+  width: 16px;
+  border-radius: 4px;
+  border: 1px solid #767676;
+}
+.form-checkbox-block > input:checked ~ .checkbox-icon {
+  background-color: #0d6efd;
+}
+.form-input-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  align-items: flex-start;
+  color: var(--blcolor-);
+}
+.form-input-block > input {
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  color: var(--blcolor-);
+  background: #fff;
+  width: 290px;
+  /* width: 100%; */
+}
+.form-input-block > input::placeholder {
+  color: var(--blcolor-);
+  font-size: 16px;
+  line-height: 100%;
+}
+.form-button {
+  background-color: #0d6efd;
+  border: 1px solid #0d6efd;
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+  padding: 8px 8px;
+  max-width: 338px;
+  width: 100%;
+}
+.form-button:hover {
+  opacity: 0.7;
+}
+.form-info {
+  text-align: center;
+  color: #6c757d;
+  font-size: 16px;
+  line-height: 24px;
+}

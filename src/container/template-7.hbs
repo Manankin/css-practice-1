@@ -1,0 +1,55 @@
+<main class='main flex-column'>
+
+  <section class='hero-block flex-column'>
+    {{#with hero}}
+      <div class='hero-title'>
+        <h1> {{title}} </h1>
+      </div>
+      <div class='hero-description'>
+        <p> {{description}} </p>
+      </div>
+      <div class='hero-btn'>
+        {{#with button}}
+          <a href='{{url}}' class='hero-button'>
+            {{text}}
+          </a>
+        {{/with}}
+      </div>
+    {{/with}}
+  </section>
+
+  <section class='about flex-column'>
+    {{#with about}}
+      <h2> {{heading}} </h2>
+      <p> {{info}} </p>
+    {{/with}}
+  </section>
+
+  <section class='articles flex-column'>
+    <div class='articles-header flex-row'>
+      <h2>Our articles</h2>
+      <div>
+        <a href='#' class='btn-view-all'>View All</a>
+      </div>
+    </div>
+    <div class='cards-list flex-row'>
+      {{#each articles}}
+        <div class='article-card flex-column'>
+          <div>
+            <img
+              src='{{photo}}'
+              alt='{{name}}'
+              class='card-img'
+            />
+          </div>
+          <h3> {{name}} </h3>
+          <p> {{description}} </p>
+          <div class='btn-read-more'>
+            <a href='#'>Read All</a>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </section>
+
+</main>

@@ -1,0 +1,82 @@
+<main class='template-6'>
+  <section class='hero-block'>
+    <div class='input'>
+      {{#with form}}
+        <form action='input' class='input-fields'>
+          {{#each inputs}}
+            <input
+              type='{{type}}'
+              name='{{name}}'
+              class='input-field'
+              placeholder='{{placeholder}}'
+              id='{{id}}'
+            />
+          {{/each}}
+        </form>
+        <form action='' class='input-checkbox'>
+          <div></div>
+          <input type='checkbox' name='{{checkbox.name}}' />
+          <label
+            for='{{checkbox.name}}'
+          >{{checkbox.label}}</label>
+        </form>
+        <button type='submit' class='form-button'>
+          {{button}}
+        </button>
+        <div class='divider'></div>
+        <div class='submit-info'>
+          {{info}}
+        </div>
+      {{/with}}
+    </div>
+    <div class='hero-info'>
+      {{#with info}}
+        <div class='hero-title'> {{title}} </div>
+        <div class='hero-text'> {{description}} </div>
+      {{/with}}
+    </div>
+  </section>
+  <section class='updates'>
+    {{#with updates}}
+      <div class='updates-title'> {{title}} </div>
+
+      {{#each list}}
+        <div class='updates-card'>
+          <div class='img'>
+            <img src='#' alt='avatar' />
+          </div>
+          <div class='description'>
+            <div class='nickname'>@{{nickname}}</div>
+            <p> {{description}} </p>
+          </div>
+        </div>
+      {{/each}}
+      <div class='all-updates-link'>
+        {{#with show_all}}
+          <a href='{{url}}'> {{text}} </a>
+        {{/with}}
+      </div>
+    {{/with}}
+  </section>
+
+  <section class='feedback'>
+    {{#with expirience}}
+      <div class='feedback-title'>
+        <div class='feedback-title-block'>
+          <h2>{{title}} </h2>
+          <div class='feedback-title-badge'>
+            <span> {{badge}} </span>
+          </div>
+        </div>
+      </div>
+      <div class='feedback-block'>
+        {{#each list}}
+          <div class='feedback-item-card'>
+            <h3> {{name}} </h3>
+            <p> {{details}} </p>
+          </div>
+        {{/each}}
+      </div>
+    {{/with}}
+  </section>
+</main>

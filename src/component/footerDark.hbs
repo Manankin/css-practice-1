@@ -1,0 +1,14 @@
+<footer class='flex-row footer-block'>
+  {{#with data}}
+    <div class='footer-links flex-row'>
+      {{#each pages}}
+        <a href='{{path}}' class='footer-link'>
+          {{name}}
+        </a>
+      {{/each}}
+    </div>
+    <div class='footer-copyright'>
+      <span> {{copyright}} </span>
+    </div>
+  {{/with}}
+</footer>
